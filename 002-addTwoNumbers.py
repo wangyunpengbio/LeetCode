@@ -3,6 +3,7 @@ class Solution:
         result = ListNode(0)
         r = result
         carry = 0
+        # 模拟初等数学直接相加
         while(l1 or l2):
             a = l1.val if l1 else 0
             b = l2.val if l2 else 0
