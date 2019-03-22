@@ -6,4 +6,3 @@ class Solution:
         nums1.extend(nums2)
         nums1.sort()
         return((nums1[int(numLeng/2)] + nums1[int((numLeng-1)/2)])/2)
-        
