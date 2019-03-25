@@ -1,5 +1,6 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+        # 参考答案的滑动窗口方法，用双指针来进行滑动
         n = len(s)
         myset = set()
         ans = 0
