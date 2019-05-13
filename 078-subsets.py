@@ -5,7 +5,7 @@ class Solution:
             results.append(result[:])
             for i,item in enumerate(nums[level:]):
                 result.append(item)
-                dfs(results,result,nums,level=level+i+1)
+                dfs(results,result,nums,level=level+i+1) # 加i是为了获得数组的绝对位置 不然也可以  dfs(results,result,nums[i:],level=level+1)
                 result.pop()
         results = []
         dfs(results,[],nums,level=0)
