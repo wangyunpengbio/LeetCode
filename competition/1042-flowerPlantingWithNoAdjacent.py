@@ -1,6 +1,6 @@
 class Solution:
     def gardenNoAdj(self, N: int, paths: List[List[int]]) -> List[int]:
-        # 超出时间限制
+        # 深度优先遍历 超出时间限制
         # 查看当前种花方式，已经种花的花园 是否有邻接种植相同花的情况
         def check(color,paths):
             for path in paths:
