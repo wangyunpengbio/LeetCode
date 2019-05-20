@@ -1,4 +1,5 @@
 class Solution:
+    # 超出时间，检查当前结果的test函数可以优化
     def solveNQueens(self, n: int) -> List[List[str]]:
         # 检查当前结果是否正确
         def test(result):
