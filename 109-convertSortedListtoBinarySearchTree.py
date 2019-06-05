@@ -12,6 +12,7 @@
 #         self.right = None
 
 class Solution:
+    # 存储为数组
     def sortedListToBST(self, head: ListNode) -> TreeNode:
         if head is None:
             return None
@@ -19,7 +20,7 @@ class Solution:
         while head:
             head_list.append(head.val)
             head = head.next
-        # 调用和第108题一样的动态规划方法
+        # 调用和第108题一样的递归方法
         def buildBST(nums):
             if len(nums)==0:
                 return None
