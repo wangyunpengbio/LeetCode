@@ -38,7 +38,7 @@ class Solution:
             if item.right != None:
                 item.right.val = item.val + item.right.val
                 queue.append(item.right)
-        # 从字典和树种,删除不足节点
+        # 从字典和树中,删除不足节点
         flag = True
         while flag:
             flag = False
