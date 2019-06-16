@@ -6,6 +6,7 @@
 #         self.right = None
 
 class Solution:
+    # 超时
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         # 记录从根到该结点的路径
         def search(root,target):
