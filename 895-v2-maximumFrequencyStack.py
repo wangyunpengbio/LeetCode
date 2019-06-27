@@ -1,5 +1,7 @@
 class FreqStack(object):
-
+    # 两个dic
+    # freq 值->频率
+    # group 频率->值
     def __init__(self):
         self.freq = collections.defaultdict(int)
         self.group = collections.defaultdict(list)
