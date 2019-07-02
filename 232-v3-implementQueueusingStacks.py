@@ -1,36 +1,41 @@
 class MyQueue:
-    # 使用双向队列实现队列，初始位置弹出时间复杂度更低，O(1) 更快
+    # 真的使用栈实现队列，两个栈更快
     def __init__(self):
         """
         Initialize your data structure here.
         """
-        from collections import deque
-        self.queue = deque()
-        
+        self.stack1 = []
+        self.stack2 = []
 
     def push(self, x: int) -> None:
         """
         Push element x to the back of queue.
         """
-        self.queue.append(x)
+        self.stack1.append(x)
 
     def pop(self) -> int:
         """
         Removes the element from in front of queue and returns that element.
         """
-        return self.queue.popleft()
+        if len(self.stack2) == 0:
+            while self.stack1:
+                self.stack2.append(self.stack1.pop())
+        return self.stack2.pop()
 
     def peek(self) -> int:
         """
         Get the front element.
         """
-        return self.queue[0]
+        if len(self.stack2) == 0:
+            while self.stack1:
+                self.stack2.append(self.stack1.pop())
+        return self.stack2[-1]
 
     def empty(self) -> bool:
         """
         Returns whether the queue is empty.
         """
-        return len(self.queue) == 0
+        return len(self.stack1) + len(self.stack2) == 0
 
 
 # Your MyQueue object will be instantiated and called as such:

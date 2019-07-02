@@ -1,5 +1,6 @@
 class MyQueue:
-    # 使用队列实现队列
+    # 使用列表实现队列 此种实现较慢
+    # 最大的开销发生在超过当前分配大小的增长，这种情况下所有元素都需要移动；或者是在起始位置附近插入或者删除元素，这种情况下所有在该位置后面的元素都需要移动。如果你需要在一个队列的两端进行增删的操作，应当使用collections.deque（双向队列）
     def __init__(self):
         """
         Initialize your data structure here.
