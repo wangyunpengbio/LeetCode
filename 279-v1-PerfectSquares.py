@@ -1,0 +1,1 @@
+numSquares(n)=min(numSquares(n-k) + 1) ∀k∈square numbers
